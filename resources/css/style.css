@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.payment-container {
+  width: 550px;
+  height: 590px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.payment {
+  width: 75%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.expire-security {
+  display: flex;
+}
+
+input {
+  width: 95%;
+  height: 30px;
+  font-size: 18px;
+}
+
+input:user-invalid {
+  border-color: #ff0000;
+}
+
+#card-number:user-invalid ~ #card-number-error {
+  display: block;
+}
+
+#name:user-invalid ~ #name-error {
+  display: block;
+}
+
+#expire:user-invalid ~ #expire-error {
+  display: block;
+}
+
+#security:user-invalid ~ #security-error {
+  display: block;
+}
+
+#zip-postal:user-invalid ~ #postal-error {
+  display: block;
+}
+
+.form-error {
+  display: none;
+}
+
+.text-header {
+  width: 100%;
+  height: 70px;
+  padding: 20px 0;
+  background-color: rgba(127, 242, 255, 0.5);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.text-header p {
+  margin: 0;
+  text-align: center;
+  font-size: 10px;
+  font-family: "Abril Fatface", "Segoe UI", sans-serif;
+}
+
+.text-header h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+  font-family: "Abril Fatface", "Segoe UI", sans-serif;
+}
+
+button {
+  margin-top: 15px;
+  width: 400px;
+  height: 40px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border: transparent;
+  border-radius: 5px;
+}
+
+button:active {
+  background-color: #0057b3;
+}
+
+.form-item {
+  margin: 10px 0 0 0;
+}
+
+@media only screen and (max-width: 400px) {
+  button {
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}

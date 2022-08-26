@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <title>Payment Form</title>
+  </head>
+  <body>
+    <div class="payment-container">
+      <div class="text-header">
+        <h2>Pay Invoice</h2>
+        <p>You better pay up.</p>
+      </div>
+      <div class="payment">
+        <div class="card-images"></div>
+        <div class="form-group">
+          <form method="post">
+            <div class="form-item">
+              <label for="payment-amount">Payment amount:</label>
+              <div class="payment-amount">
+                <span>$500.00</span>
+              </div>
+            </div>
+            <div class="form-item">
+              <label class="name-on-card" for="name">Name on card:</label>
+              <input
+                class="name-on-card"
+                type="text"
+                name="name"
+                id="name"
+                required
+                aria-describedby="name-error"
+              />
+              <span id="name-error" class="form-error"
+                >Please enter a valid Full Name</span
+              >
+            </div>
+            <div class="form-item">
+              <label class="card-number-input" for="card-number"
+                >Card number:</label
+              >
+              <input
+                class="card-number-input"
+                type="number"
+                min="1000000000000000"
+                max="9999999999999999"
+                name="card-number"
+                id="card-number"
+                required
+                aria-describedby="card-number-error"
+              />
+              <span id="card-number-error" class="form-error"
+                >Must be a valid credit card number</span
+              >
+            </div>
+            <div class="expire-security form-item">
+              <div class="expire">
+                <label for="expire">Expiry Date:</label>
+                <input
+                  type="date"
+                  name="expire"
+                  id="expire"
+                  required
+                  aria-describedby="expire-error"
+                />
+                <span id="expire-error" class="form-error"
+                  >Please enter a date.</span
+                >
+              </div>
+              <div class="security">
+                <label for="security">Security Code:</label>
+                <input
+                  type="number"
+                  name="security"
+                  id="security"
+                  min="100"
+                  max="999"
+                  required
+                  aria-describedby="security-error"
+                />
+                <span id="security-error" class="form-error"
+                  >Please enter a 3 digit security code.</span
+                >
+              </div>
+            </div>
+            <div class="form-item">
+              <label for="zip-postal">Zip/Postal Code</label>
+              <input
+                type="number"
+                name="zip-postal"
+                id="zip-postal"
+                min="10000"
+                max="99999"
+              />
+              <span id="postal-error" class="form-error"
+                >Please enter a valid ZIP/Postal code</span
+              >
+            </div>
+
+            <button>Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
